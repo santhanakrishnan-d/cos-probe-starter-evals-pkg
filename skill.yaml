@@ -1,0 +1,17 @@
+metadata:
+  skill_id: cos-probe-starter-evals
+  version: 0.1.0
+  display_name: COS probe starter evals
+  description: Throwaway probe skill to verify the starter eval suite offer at import.
+runtime:
+  entrypoint: scripts/run.sh
+  timeout_seconds: 30
+  side_effect_class: contained
+  idempotency: optional
+  quota:
+    max_input_bytes: 65536
+    max_output_bytes: 262144
+contracts:
+  input_schema: schemas/input.json
+  output_schema: schemas/output.json
+tests_path: tests
